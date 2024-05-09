@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .footer-fix{
+            display: none;
+        }
+       @media(max-width:767px){
+        .footer-fix{
+            display: block;
+        }
+        .footer-fix {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #000;
+            margin-bottom: 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            left: 0;
+            right: 0;
+
+        }
+        .footer-fix li a{
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-family: system-ui;
+        }
+        .footer-fix__list{
+            padding: 7px 20px;
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+        }
+        .footer-fix__list li i{
+            color: #fbf9f9;
+            background: gray;
+            padding: 3px 3px;
+            font-size: 13px;
+            border-radius: 2px;
+        }
+        .footer-fix__list li:hover i,.footer-fix__list li:hover a{
+            color:red;
+        }
+
+       }
+
+        
+    </style>
+</head>
+
+<body>
+    <div style="height:600px;background: green;width: 100%;">WElcome to home page</div>
+    <div class="footer-fix">
+    <ul class="footer-fix__list">
+       
+        <li>
+            <i class="fa-solid fa-house-user"></i>
+            <a href="#">Home</a>
+        </li>
+        <li><i class="fa-brands fa-slideshare"></i>
+            <a href="#">Stories</a>
+        </li>
+        <li><i class="fa-solid fa-headset"></i>
+            <a href="#">Ads</a>
+        </li>
+    </ul>
+    </div>
+</body>
+
+</html>
