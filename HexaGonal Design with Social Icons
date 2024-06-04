@@ -1,0 +1,82 @@
+Hexagoal Design with html and css
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hex {
+            display: inline-block;
+            position: relative;
+            width: 60px;
+            height: 51.96px; /* width * 0.866 */
+            background: rgb(189, 188, 188);
+            box-sizing: border-box;
+            -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+            -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+          }
+          .hex:hover{
+            background: skyblue
+          }
+          .hex-background {
+            position: absolute;
+            background-color: #fff; 
+            top: 2px; /* equal to border thickness */
+            left: 2px; /* equal to border thickness */
+            width: 55.96px; /* container height - (border thickness * 2) */
+            height: 47.96px; /* container height - (border thickness * 2) */
+            -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+            -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+          }
+          
+          .hex img {
+            position: absolute;
+            width: 116px; /* container height - (border thickness * 2) */
+            height: 99.92px; /* container height - (border thickness * 2) */
+            -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+            -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+          }
+          .hex p{
+            text-align: center;
+          
+          }
+          .hex-container{
+            display: grid;
+            list-style: none;
+            grid-template-columns: 80px 80px 80px;
+            padding-left: 0;
+          }
+    </style>
+    <script>
+        console.log(51.96-(2*2))
+        </script>
+</head>
+<body>
+    <ul class="hex-container">
+        <li>
+            <a class="hex">
+                <span class="hex-background">
+                 <p>F</p>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="hex">
+                <span class="hex-background">
+                 <p>F</p>
+                </span>
+            </a>
+        </li>
+        <li>
+            <a class="hex">
+                <span class="hex-background">
+                 <p>F</p>
+                </span>
+            </a>
+        </li>
+    </ul>
+</body>
+</html>
